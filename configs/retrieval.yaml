@@ -1,0 +1,17 @@
+﻿hybrid_search:
+  dense_weight: 0.7
+  sparse_weight: 0.3
+  top_k: 20
+
+dense:
+  similarity_metric: "cosine"
+  batch_size: 32
+
+bm25:
+  k1: 1.5
+  b: 0.75
+
+reranker:
+  enabled: true
+  top_n: 5
+  score_threshold: 0.4

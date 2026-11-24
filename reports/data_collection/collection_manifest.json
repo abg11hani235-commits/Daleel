@@ -1,0 +1,23 @@
+{
+  "manifest_version": "1.1.0",
+  "software_version": "0.2.0",
+  "query": "( \"Diabetes Mellitus, Type 2\"[MeSH Terms] OR \"type 2 diabetes\"[Title/Abstract] OR T2D[Title/Abstract] ) AND ( \"Chronic Kidney Disease\"[Title/Abstract] OR \"Renal Insufficiency, Chronic\"[MeSH Terms] OR \"Diabetic Nephropathies\"[MeSH Terms] OR CKD[Title/Abstract] ) AND ( randomized controlled trial[Publication Type] OR meta-analysis[Publication Type] OR systematic review[Publication Type] OR practice guideline[Publication Type] ) AND (\"2015/01/01\"[Date - Publication] : \"2026/12/31\"[Date - Publication]) AND English[Language]",
+  "query_hash": "708f858273fea1414efa78250c09bbcfca35c12677156a3e98584073e4fac18f",
+  "collection_start_utc": "2026-11-20T07:02:21.244910+00:00",
+  "collection_end_utc": "2026-11-20T07:03:41.124775+00:00",
+  "pmcid_resolution_completed_utc": "2026-11-20T07:04:40.125000+00:00",
+  "reported_pubmed_result_count": 1168,
+  "total_target_pmids": 1168,
+  "total_corpus_records": 1169,
+  "original_records_preserved": 50,
+  "newly_added_records": 1119,
+  "failed_records_count": 0,
+  "landmark_seeds_included": 7,
+  "records_with_pmcid": 24,
+  "records_without_pmcid": 1145,
+  "retrieval_method": "NCBI E-Utilities (esearch + efetch Medline)",
+  "pmcid_resolution_method": "NCBI E-Utilities (elink pubmed_pmc)",
+  "destination_file": "data/raw/pubmed/pubmed_records.jsonl",
+  "snapshot_file": "data/raw/pubmed/search_pmids_snapshot.json",
+  "pmcid_mapping_file": "data/raw/pubmed/pmcid_mapping.json"
+}

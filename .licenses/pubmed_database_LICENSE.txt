@@ -1,0 +1,8 @@
+User Notification regarding NCBI PubMed API Terms of Use and Licensing
+Timestamp: 2026-11-20T07:38:00Z
+Notice:
+PubMed and NCBI data are subject to NCBI/NLM terms and conditions.
+Please review the official policies and disclaimers:
+- Disclaimer: https://pubmed.ncbi.nlm.nih.gov/disclaimer/
+- Policies: https://www.ncbi.nlm.nih.gov/home/about/policies/
+Always verify specific license terms for individual papers and datasets retrieved.

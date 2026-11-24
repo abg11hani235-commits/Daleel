@@ -1,0 +1,17 @@
+﻿app:
+  name: "Daleel Evidence RAG"
+  version: "0.1.0"
+  debug: true
+
+paths:
+  raw_data_dir: "data/raw"
+  interim_data_dir: "data/interim"
+  processed_data_dir: "data/processed"
+  benchmark_dir: "data/benchmark"
+  experiments_dir: "experiments"
+
+ncbi:
+  tool: "daleel_research"
+  request_delay_sec: 0.34
+  max_retries: 3
+  batch_size: 50

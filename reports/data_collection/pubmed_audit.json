@@ -1,0 +1,299 @@
+{
+  "audit_timestamp": "2026-11-20T05:55:44.310980+00:00",
+  "auditor_role": "Senior Data Engineer (Daleel Evidence RAG)",
+  "dataset_file": "data\\raw\\pubmed\\pubmed_records.jsonl",
+  "record_count": 50,
+  "field_validation": {
+    "total_records": 50,
+    "available_keys": [
+      "abstract",
+      "authors",
+      "doi",
+      "journal",
+      "mesh_terms",
+      "pmid",
+      "pub_date",
+      "publication_types",
+      "title"
+    ],
+    "required_fields_validation": {
+      "pmid": {
+        "present_count": 50,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "valid": true
+      },
+      "title": {
+        "present_count": 50,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "valid": true
+      },
+      "abstract": {
+        "present_count": 50,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "valid": true
+      },
+      "pub_date": {
+        "present_count": 50,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "valid": true
+      },
+      "journal": {
+        "present_count": 50,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "valid": true
+      },
+      "publication_types": {
+        "present_count": 50,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "valid": true
+      }
+    },
+    "optional_and_derived_fields": {
+      "doi": {
+        "present_count": 50,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "status": "PRESENT"
+      },
+      "pmcid": {
+        "present_count": 0,
+        "missing_count": 50,
+        "missing_percentage": 100.0,
+        "status": "ABSENT_IN_MEDLINE_INGESTION",
+        "note": "PMCID is not extracted during raw Medline efetch; requires PMC lookup or id-mapping."
+      },
+      "year": {
+        "present_count": 50,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "status": "EXTRACTABLE_FROM_PUB_DATE"
+      }
+    }
+  },
+  "duplicate_audit": {
+    "total_records": 50,
+    "unique_pmids": 50,
+    "duplicate_pmid_count": 0,
+    "duplicate_pmids": {},
+    "duplicate_title_count": 1,
+    "duplicate_titles": {
+      "2026 aha/acc/ada/asn guideline for the prevention, detection, evaluation, and management of cardiovascular-kidney-metabolic syndrome: a report of the american college of cardiology/american heart association joint committee on clinical practice guidelines.": 2
+    },
+    "has_duplicate_pmids": false,
+    "has_co_published_titles": true,
+    "co_publication_details": [
+      {
+        "title": "2026 aha/acc/ada/asn guideline for the prevention, detection, evaluation, and management of cardiovascular-kidney-metabolic syndrome: a report of the american college of cardiology/american heart association joint committee on clinical practice guidelines.",
+        "count": 2,
+        "pmids": [
+          "42265997",
+          "42263157"
+        ],
+        "journals": [
+          "Journal of the American College of Cardiology",
+          "Circulation"
+        ]
+      }
+    ]
+  },
+  "publication_types_and_years": {
+    "publication_types_distribution": {
+      "Journal Article": 50,
+      "Randomized Controlled Trial": 24,
+      "Systematic Review": 19,
+      "Meta-Analysis": 14,
+      "Multicenter Study": 8,
+      "Network Meta-Analysis": 4,
+      "Clinical Trial, Phase III": 3,
+      "Practice Guideline": 3,
+      "Comparative Study": 2,
+      "Clinical Trial, Phase II": 2,
+      "Research Support, Non-U.S. Gov't": 2,
+      "Review": 2,
+      "Equivalence Trial": 1,
+      "Observational Study": 1
+    },
+    "publication_years_distribution": {
+      "2026": 49,
+      "2025": 1
+    },
+    "dominant_year": "2026",
+    "dominant_year_percentage": 98.0
+  },
+  "clinical_relevance": {
+    "total_records": 50,
+    "core_dual_relevance_count": 44,
+    "core_dual_relevance_percentage": 88.0,
+    "peripheral_or_incidental_count": 5,
+    "peripheral_or_incidental_percentage": 10.0,
+    "false_positives_count": 1,
+    "false_positives_percentage": 2.0,
+    "false_positive_details": [
+      {
+        "pmid": "42246672",
+        "title": "Finerenone in Persons with Chronic Kidney Disease without Diabetes.",
+        "reason": "Exclusion of diabetic population; matched T2D query keyword solely via background rationale."
+      }
+    ],
+    "peripheral_details": [
+      {
+        "pmid": "42805503",
+        "title": "EASL-EASD-EASO guidance on the use of resmetirom and semaglutide as MASH-targeted therapy.",
+        "reason": "Practice guideline primary focus is liver disease (MASH) with metabolic co-morbidities."
+      },
+      {
+        "pmid": "42504070",
+        "title": "Effects of age, sex, and renal function on bowel movement-improving effects of Bifidobacterium bifidum G9-1 on constipation in patients with type 2 diabetes mellitus and chronic kidney disease: A prespecified subgroup analysis of the BIRDIE study.",
+        "reason": "Focus is constipation/microbiome symptoms rather than cardiorenal pathology."
+      },
+      {
+        "pmid": "42290203",
+        "title": "Factors associated with aortic valve calcification in type 2 diabetes-a Steno INTEN-CT substudy.",
+        "reason": "Substudy focused on valvular calcification rather than kidney disease progression."
+      },
+      {
+        "pmid": "42249978",
+        "title": "Association between SGLT2 inhibitors and outcomes after heart transplant in patients with type 2 diabetes: A systematic review and meta-analysis.",
+        "reason": "Focus on post-heart transplant recipients with incidental SGLT2i mention."
+      },
+      {
+        "pmid": "42237280",
+        "title": "Adolescent obesity and risk of serious chronic morbidity and mortality in young adulthood: a systematic review of cohorts from national registries.",
+        "reason": "Broad population registry study of young adult chronic morbidities."
+      }
+    ]
+  },
+  "landmark_studies_coverage": {
+    "total_landmarks_checked": 6,
+    "primary_trials_present_count": 0,
+    "primary_trials_coverage_pct": 0.0,
+    "secondary_citations_present_count": 6,
+    "landmark_details": {
+      "CREDENCE": {
+        "name": "CREDENCE",
+        "primary_pmid": "30990260",
+        "publication_year": 2019,
+        "drug_class": "SGLT2 inhibitor (Canagliflozin)",
+        "primary_trial_present": false,
+        "secondary_mentions_count": 1,
+        "citing_pmids": [
+          "42546972"
+        ],
+        "status": "SECONDARY_MENTION_ONLY"
+      },
+      "DAPA-CKD": {
+        "name": "DAPA-CKD",
+        "primary_pmid": "32970396",
+        "publication_year": 2020,
+        "drug_class": "SGLT2 inhibitor (Dapagliflozin)",
+        "primary_trial_present": false,
+        "secondary_mentions_count": 1,
+        "citing_pmids": [
+          "42256478"
+        ],
+        "status": "SECONDARY_MENTION_ONLY"
+      },
+      "EMPA-KIDNEY": {
+        "name": "EMPA-KIDNEY",
+        "primary_pmid": "36331190",
+        "publication_year": 2023,
+        "drug_class": "SGLT2 inhibitor (Empagliflozin)",
+        "primary_trial_present": false,
+        "secondary_mentions_count": 1,
+        "citing_pmids": [
+          "42256478"
+        ],
+        "status": "SECONDARY_MENTION_ONLY"
+      },
+      "FIDELIO-DKD": {
+        "name": "FIDELIO-DKD",
+        "primary_pmid": "33264271",
+        "publication_year": 2020,
+        "drug_class": "Nonsteroidal MRA (Finerenone)",
+        "primary_trial_present": false,
+        "secondary_mentions_count": 1,
+        "citing_pmids": [
+          "42248158"
+        ],
+        "status": "SECONDARY_MENTION_ONLY"
+      },
+      "FIGARO-DKD": {
+        "name": "FIGARO-DKD",
+        "primary_pmid": "34449181",
+        "publication_year": 2021,
+        "drug_class": "Nonsteroidal MRA (Finerenone)",
+        "primary_trial_present": false,
+        "secondary_mentions_count": 1,
+        "citing_pmids": [
+          "42248158"
+        ],
+        "status": "SECONDARY_MENTION_ONLY"
+      },
+      "FLOW": {
+        "name": "FLOW",
+        "primary_pmid": "38785209",
+        "publication_year": 2024,
+        "drug_class": "GLP-1 RA (Semaglutide)",
+        "primary_trial_present": false,
+        "secondary_mentions_count": 3,
+        "citing_pmids": [
+          "42567173",
+          "42337824",
+          "42244145"
+        ],
+        "status": "SECONDARY_MENTION_ONLY"
+      }
+    }
+  },
+  "sampling_bias_analysis": {
+    "reported_query_universe_size": 1168,
+    "current_sample_size": 50,
+    "sample_coverage_ratio_pct": 4.28,
+    "requested_date_window": "2015/01/01 to 2026/12/31 (12 calendar years)",
+    "actual_sample_date_span": "2025 to 2026",
+    "historical_years_covered_pct": 16.67,
+    "has_severe_temporal_bias": true,
+    "root_cause": "NCBI E-Utilities esearch defaults to reverse-chronological ordering (sort='pub_date' desc / Most Recent). Retrieving retmax=50 resulted in a 98% truncation that captured almost exclusively 2026 and late 2025 records, completely starving foundational literature from 2015 to 2024 including the landmark clinical trials.",
+    "mitigation_strategies": [
+      "1. Change esearch sorting parameter from default to sort='relevance'.",
+      "2. Stratify collection across publication years (e.g. allocating quotas per year 2015-2026).",
+      "3. Ingest landmark clinical trials (CREDENCE, DAPA-CKD, EMPA-KIDNEY, FIDELIO, FIGARO, FLOW) explicitly via a dedicated seed list or targeted query.",
+      "4. Expand sample size from 50 to at least 500-1,000 to cover the clinical breadth."
+    ]
+  },
+  "collection_script_idempotency": {
+    "script_path": "scripts\\collect_pubmed.py",
+    "script_exists": true,
+    "overwrites_existing_file": true,
+    "has_deduplication_logic": false,
+    "has_incremental_append": false,
+    "risk_assessment": "HIGH_DATA_LOSS_RISK_ON_RERUN",
+    "explanation": "Running scripts/collect_pubmed.py again with different arguments or smaller retmax directly overwrites data/raw/pubmed/pubmed_records.jsonl using save_jsonl ('w' mode), destroying previously collected records with no backup or deduplication.",
+    "recommended_fix": "Refactor save_jsonl / collect_pubmed.py to load existing PMIDs, append only new records, or write to timestamped run files (e.g. pubmed_records_YYYYMMDD_HHMMSS.jsonl) and provide a merge step."
+  },
+  "provenance_and_reproducibility": {
+    "has_pmid_identifier": true,
+    "has_search_query_embedded": false,
+    "has_collection_timestamp": false,
+    "has_source_api_metadata": false,
+    "provenance_completeness": "1/4",
+    "status": "INSUFFICIENT_PROVENANCE",
+    "finding": "The JSONL file stores only raw article fields. There is no run-level or record-level provenance stating which search query returned the article, when the query was executed, or the E-Utilities API version. Reproduction relies entirely on external git commit logs.",
+    "recommended_fields": [
+      "_retrieved_at (ISO 8601 UTC timestamp)",
+      "_search_query (exact query string used)",
+      "_source (e.g. 'ncbi_pubmed_eutilities')"
+    ]
+  },
+  "verdict": {
+    "dataset_health_score": "72/100",
+    "gate_status": "PROCEED_WITH_QUERY_AND_INGESTION_REFINEMENTS",
+    "summary_recommendation": "The current 50-record dataset has perfect syntactic integrity (zero duplicates, 100% titles/abstracts/PMIDs), but suffers from acute reverse-chronological sampling bias (98% of papers from 2026), 0% primary landmark trial coverage, a 2% false positive rate (non-diabetic CKD trials like FIND-CKD matching background text), zero PMCID extraction, and no idempotency in collect_pubmed.py. Do NOT proceed to full PMC extraction until the search query and collection pipeline are updated with relevance sorting, seed landmark preservation, and PMCID mapping."
+  }
+}
